@@ -2245,8 +2245,8 @@ MonoBehaviour:
   speed: 10
   countText: {fileID: 1468190525}
   winTextObject: {fileID: 539165084}
-  projectile: {fileID: 0}
-  projectileSpeed: 0
+  projectile: {fileID: -6938286583601326717, guid: caa50fe3659612d45b65e08f43b3e09a, type: 3}
+  projectileSpeed: 1
 --- !u!4 &1591325479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3251954954347903101, guid: 84869dd3f206b6640bd48584d848ca1b, type: 3}
