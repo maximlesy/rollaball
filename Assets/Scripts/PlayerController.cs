@@ -11,12 +11,15 @@ public class PlayerController : MonoBehaviour
     public float speed = 0;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    public Rigidbody projectile;
+    public float projectileSpeed = 0;
 
     private Rigidbody playerBall;
     private float movementX;
     private float movementY;
     private int count;
-    
+    private float destroyDelay = .5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,15 @@ public class PlayerController : MonoBehaviour
 
         winTextObject.SetActive(false);
         SetCountText();
+    }
+
+    private void Update()
+    {
+        if(Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            Rigidbody shoot = Instantiate(projectile, transform.position, transform.rotation);
+            shoot.velocity = transform.forward * projectileSpeed;
+        }
     }
 
     void OnMove(InputValue movementValue)
